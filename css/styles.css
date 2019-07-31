@@ -317,3 +317,114 @@ color: var(--black);
       color: var(--black);
     
   }
+
+  #title {
+    width: 1100px;
+    height: 38px;
+    font-family: Dosis;
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 48px;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--white-five);
+    display: inline-block;
+    padding-left: 170px;
+  }
+  #advert {
+  width: 313px;
+  height: 24px;
+  font-family: 'Source Sans Pro';
+  font-size: 36px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  margin-left: 35%;
+  display: inline;
+  color: var(--black-three);
+  }
+  
+  
+  #denim {
+  width: 370px;
+  height: 360px;
+  background-color: #666666;
+  }
+  
+  #describe {
+  width: 200px;
+  height: 18px;
+  font-family: 'Source Sans Pro';
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black-three);
+  }
+  #price {
+  width: 52px;
+  height: 11px;
+  font-family: 'Source Sans Pro';
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #999999;
+  }
+  .new {
+  width: 1900px;
+  height: 150px;
+  background-color: var(--white-five);
+  margin-top:20%;
+  text-align: center;
+  }
+  #ad {
+  width: 313px;
+  height: 24px;
+  font-family: 'Source Sans Pro';
+  font-size: 36px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  margin-left: 30%;
+  margin-right:40%;
+  display: inline;
+  color: var(--black-three);
+  }
+  
+  .new .column{
+    
+    margin-left: 10%;
+  }
+  .new .denim{
+    width: 570px;
+    height: 373px;
+    background-color: #666666;
+  }
+  .new #describe {
+    width: 49px;
+    height: 16px;
+    font-family: 'Source Sans Pro';
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.92;
+    letter-spacing: 2.5px;
+    text-align: center;
+    color: #a88d7b;
+  }
