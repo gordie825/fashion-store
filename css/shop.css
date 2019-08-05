@@ -18,7 +18,9 @@
     height: 2769px;
   }
   
-  
+  .shop-1{
+    background-image: url(../images/shop2.jpg);
+  }
   a{
     text-transform: uppercase;
   }
@@ -178,6 +180,7 @@
     letter-spacing: 1.5px;
     text-align: left;
     margin-left: 20px;
+
     color: var(--black-two);
   }
   
@@ -225,6 +228,7 @@
     line-height: normal;
     letter-spacing: 0.8px;
     text-align: left;
+    padding-right: 120px;
     color: #666666;
   }
 
@@ -239,6 +243,7 @@
     line-height: normal;
     letter-spacing: 0.8px;
     text-align: left;
+    padding-right: 120px;
     color: #666666;
   }
 
@@ -296,6 +301,8 @@
     letter-spacing: 0.8px;
     text-align: left;
     color: #666666;
+    padding-right: 100px;
+    padding-right: 20px;
   }
 
   #cart{
@@ -309,6 +316,7 @@
     line-height: normal;
     letter-spacing: 1.1px;
     text-align: left;
+    padding-right: 20px;
     color: #666666;
   }
 

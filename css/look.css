@@ -1,3 +1,115 @@
+
+.navbar {
+  width: 40px;
+  height: 12px;
+  font-family: 'Dosis';
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-align: left;
+  color: #666666;
+  display: inline-flex;
+  margin-right: 70px;
+  }
+  .top{
+  width: 1900px;
+  height: 53px;
+  background-color: var(--black);
+  }
+  .logo{
+    width: 160px;
+    height: 22px;
+    font-family: 'Dosis';
+    font-size: 30px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-align: left;
+    margin-left: 20px;
+
+    color: var(--black-two);
+  }
+
+  #cart{
+    width: 21px;
+    height: 18px;
+    font-family: FontAwesome;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-align: left;
+    padding-right: 20px;
+    color: #666666;
+  }
+
+  #search{
+    width: 19px;
+    height: 19px;
+    font-family: Linearicons-Free;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #666666;
+  }
+  
+  .iconav {
+    width: 100%;
+    height: 93px;
+    background-color: var(--white-five);
+  }
+
+  .iconav .column{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+     /* Should be removed. Only for demonstration */
+  }
+  /* Clear floats after the columns */
+  .iconav .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .shop-nav {
+    width: 1900px;
+    height: 93px;
+    background-color: var(--white-five);
+  }
+
+  .shopnav #nav{
+    margin-top: 2%;
+    margin-left: 0%;
+    margin-right: 20px;
+  }
+
+  .home {
+    width: 40px;
+    height: 12px;
+    font-family: 'Dosis';
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-align: left;
+    padding-right: 120px;
+    color: #666666;
+  }
 .look{
     width: 132px;
     height: 35px;
