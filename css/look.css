@@ -1,0 +1,66 @@
+.look{
+    width: 132px;
+    height: 35px;
+    font-family: 'Source Sans Pro';
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-left: 38%;
+    color: var(--white-five);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+   width: 25%;
+    padding: 5px;
+    padding-top: 30px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  
+
+  #pics{
+    width: 100%;  
+    height: 360px;
+    background-color: #666666;
+  }
+
+  .lookbook img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ .lookbook #overlay {
+  
+   
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    
+    text-align: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .lookbook #overlay {
+    opacity: 1;
+  }
