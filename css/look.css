@@ -1,484 +1,96 @@
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
 :root {
-  --black: #2d2827;
-  --white-two: #d7d7d7;
-  --white-three: #eeeeee;
-  --greyish-brown: #555555;
-  --mushroom: #ac907f;
-  --pinkish-grey: #cccccc;
-  --greyish: #a8a8a8;
-  --white-four: #e5e5e5;
-  --black-two: #000000;
-  --black-three: #333333;
-  --white-five: #ffffff;
-  --white: #f5f5f5;
-  --brown-grey: #999999;
+	/* Base font size */
+	font-size: 10px;
 }
-body{
-  background-color: var(--black);
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
-.navbar {
-  width: 40px;
-  height: 12px;
-  font-family: 'Dosis';
-  font-size: 16px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.8px;
-  text-align: left;
-  color: #666666;
-  display: inline-flex;
-  margin-right: 70px;
-  }
-  .top{
-  width: 1900px;
-  height: 53px;
-  background-color: var(--black);
-  }
-  .logo{
-    width: 160px;
-    height: 22px;
-    font-family: 'Dosis';
-    font-size: 30px;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1.5px;
-    text-align: left;
-    margin-left: 20px;
 
-    color: var(--black-two);
-  }
+body {
+	min-height: 100vh;
+	background-color: black;
+}
 
-  #cart{
-    width: 21px;
-    height: 18px;
-    font-family: FontAwesome;
-    font-size: 22px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1.1px;
-    text-align: left;
-    padding-right: 20px;
-    color: #666666;
-  }
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
 
-  #search{
-    width: 19px;
-    height: 19px;
-    font-family: Linearicons-Free;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1px;
-    text-align: left;
-    color: #666666;
-  }
-  
-  .iconav {
-    width: 100%;
-    height: 93px;
-    background-color: var(--white-five);
-  }
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
 
-  .iconav .column{
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    height: 300px;
-     /* Should be removed. Only for demonstration */
-  }
-  /* Clear floats after the columns */
-  .iconav .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.heading span {
+	display: block;
+}
 
-  .shop-nav {
-    width: 1900px;
-    height: 93px;
-    background-color: var(--white-five);
-  }
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
 
-  .shopnav #nav{
-    margin-top: 2%;
-    margin-left: 0%;
-    margin-right: 20px;
-  }
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
 
-  .home {
-    width: 40px;
-    height: 12px;
-    font-family: 'Dosis';
-    font-size: 16px;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.8px;
-    text-align: left;
-    padding-right: 120px;
-    color: #666666;
-  }
-.look{
-    width: 132px;
-    height: 35px;
-    font-family: 'Source Sans Pro';
-    font-size: 50px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 5px;
-    text-align: center;
-    padding-left: 43%;
-    color: var(--white-five);
-  }
+.gallery-image {
+	display: block;
+	width: 306.66px;
+	height: 306.66px !important;
+	object-fit: contain;
+	transition: transform 400ms ease-out;
+}
 
-  * {
-    box-sizing: border-box;
-  }
-  
-  .column {
-    float: left;
-   width: 25%;
-    padding: 5px;
-    padding-top: 30px;
-  }
-  
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+.gallery-image:hover {
+	transform: scale(1.15);
+}
 
-  
+/*
 
-  #pics{
-    width: 100%;  
-    height: 360px;
-    background-color: #666666;
-  }
+The following rule will only run if your browser supports CSS grid.
 
-  .lookbook img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
 
- .lookbook #overlay {
-  
-   
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1; 
-    width: 100%;
-    transition: .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    
-    text-align: center;
-  }
-  
-  /* When you mouse over the container, fade in the overlay title */
-  .lookbook #overlay {
-    opacity: 1;
-  }
+*/
 
-  .footer{
-    width: 100%;
-    height: 400px;
-   
-    background-color: var(--black);
-  }
-  .footer .column {
-    float: left;
-    width: 25%;
-  }
-  
-  .footer .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .footer #logo{
-    
-      width: 117px;
-      height: 21px;
-      font-family: 'Dosis';
-      font-size: 30px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 1.5px;
-      text-align: left;
-      color: var(--white-four);
-    
-  }
-  .footer #links{
-    width: 46px;
-    height: 12px;
-    font-family: 'Source Sans Pro';
-    font-size: 18px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: normal;
-    text-align: left;
-    color: var(--white-four);
-  }
-  .footer #shop{
-    width: 45px;
-    height: 12px;
-    font-family: 'Source Sans Pro';
-    font-size: 18px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: normal;
-    text-align: left;
-    color: var(--white-four);
-  }
-  .footer #instagram-p {
-    width: 91px;
-    height: 13px;
-    font-family: 'Source Sans Pro';
-    font-size: 18px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: normal;
-    text-align: left;
-    color: var(--white-five);
-  }
-  .loca{
-    padding-top: 10%;
-  }
-  #location{
-    width: 232px;
-    height: 18px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    color: var(--brown-grey);
-  }
-  
-  #location-icon {
-    font-family: Linearicons-Free;
-  }
-  
-   #cell-no{
-    width: 128px;
-    height: 14px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 9%;
-    color: var(--brown-grey);
-  }
-  
-   #cell-icon {
-    font-family: FontAwesome;
-    margin-top: 9%;
-  }
-  
-   #gmail {
-    width: 207px;
-    height: 14px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 9%;
-    color: var(--brown-grey);
-  }
-  
-  .email #google-icon {
-    font-family: FontAwesome;
-    margin-top: 9%;
-  }
-  
-  #product{
-    width: 56px;
-    height: 11px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 16%;
-    color: var(--brown-grey);
-  }
-  
-  #featured {
-    width: 54px;
-    height: 11px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 10%;
-    color: var(--brown-grey);
-  }
-  
-  #privacy {
-    width: 120px;
-    height: 14px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 13%;
-    color: var(--brown-grey);
-  }
-  
-  #blog-l {
-    width: 28px;
-    height: 14px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 13%;
-    color: var(--brown-grey);
-  }
-  
-  #men {
-    width: 25px;
-    height: 10px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 16%;
-    color: var(--brown-grey);
-  }
-  
-  #women {
-    width: 47px;
-    height: 10px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 10%;
-    color: var(--brown-grey);
-  }
-  
-  #look {
-    width: 62px;
-    height: 11px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 13%;
-    color: var(--brown-grey);
-  }
-  
-  #support {
-    width: 52px;
-    height: 13px;
-    font-family: 'Source Sans Pro';
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    margin-top: 13%;
-    color: var(--brown-grey);
-  }
-  
-  .footer #insta-pics {
-    width: 80px;
-    height: 80px;
-    margin-top: 2%;
-    margin-left: 0%;
-    margin-right: 1%;
-    display: none;
-    background-color: var(--white-five);
-  }
-  
-  .footer img{
-    width: 100%;
-    height: 100%;
-    display: none;
-    object-fit: cover;
-  }
-  
-  .footer-small {
-    width: 100%;
-    height: 85px;
-    background-color: var(--white-two);
-  }
-  
-  #last-footer {
-    width: 450px;
-    height: 14px;
-    font-family: 'Source Sans Pro';
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.71;
-    letter-spacing: normal;
-    text-align: center;
-    margin-left: 700px;
-    color: #666666;
-  }
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
