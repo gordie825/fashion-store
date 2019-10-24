@@ -75,27 +75,27 @@
             <div class="gallery">
         
                 <div class="gallery-item">
-                    <img class="gallery-image" src="images/1.jpeg" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+                  <a href="images/1.jpeg" rel="prettyPhoto" title="title here" > <img class="gallery-image" src="images/1.jpeg" rel="prettyPhoto" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"></a>
                 </div>
         
                 <div class="gallery-item">
-                    <img class="gallery-image" src="images/2.jpeg" alt="sunset behind San Francisco city skyline">
+                  <a href="images/2.jpeg" rel="prettyPhoto" title="title here" ><img class="gallery-image" src="images/2.jpeg" rel="prettyPhoto" alt="sunset behind San Francisco city skyline"></a>
                 </div>
         
                 <div class="gallery-item">
-                    <img class="gallery-image" src="images/3.jpeg" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+                  <a href="images/3.jpeg" rel="prettyPhoto" title="title here" > <img class="gallery-image" src="images/3.jpeg" rel="prettyPhoto" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan"></a>
                 </div>
         
                 <div class="gallery-item">
-                    <img class="gallery-image" src="images/4.jpeg" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+                  <a href="images/4.jpeg" rel="prettyPhoto" title="title here" > <img class="gallery-image" src="images/4.jpeg" rel="prettyPhoto" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night"></a>
                 </div>
         
                 <div class="gallery-item">
-                    <img class="gallery-image" src="images/5.jpeg" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+                  <a href="images/5.jpeg" rel="prettyPhoto" title="title here" > <img class="gallery-image" src="images/5.jpeg" rel="prettyPhoto"alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA"></a>
                 </div>
         
                 <div class="gallery-item">
-                    <img class="gallery-image" src="images/6.jpeg" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+                  <a href="images/6.jpeg" rel="prettyPhoto" title="title here" > <img class="gallery-image" src="images/6.jpeg" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp"><a>
                 </div>
         
             </div>
@@ -183,6 +183,11 @@
           document.documentElement.scrollTop = 0;
         }
         </script>
+        <script>
+        $(document).ready(function(){
+                 $("a[rel^='prettyPhoto']").prettyPhoto();
+               });
+             </script>
             
 </body>
 
